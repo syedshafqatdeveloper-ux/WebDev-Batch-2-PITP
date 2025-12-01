@@ -1,0 +1,126 @@
+/* General reset and styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+body{
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+hr{
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+
+}
+
+.demo-section {
+ background-color: white;
+ padding: 20px;
+ border-radius: 8px;
+ border-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.resize-note{
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+    text-align:center;
+}
+
+
+/*---flex container setup---*/
+
+.flex-container{
+    /*REQUIRED: THIS TURNS ON FLEXBOX FOR THE CONTAINER */
+    Display: flex;
+    border: 2px dashed #007bff;
+    padding: 10px;
+    min-height: 100px;
+    margin-top: 15px;
+}
+
+/*---DEMO 1: Navigation Bar ---*/
+
+.nav-bar{
+    /* sets the main axis direction */
+    flex-direction: row;
+
+    /* distributes space between the items along the main axis */
+    justify-content: space-evenly;
+
+    /* centers items vertically along the cross axis */
+    align-items: center;
+    background-color: #e9f5ff;
+
+
+}
+
+.nav-bar a {
+text-decoration: none;
+color: #007bff;
+padding: 8px 15px;
+border: 1px solid transparent;
+transition: background-color 0.3s;
+}
+
+/* ---DEMO 2: Card layout---*/
+
+.card-wrapper{
+    /* REQUIRED: Allows items to break onto a new line */
+    flex-wrap: wrap;
+
+    /* Aligns items to the top of the container when wrapped */
+    align-items: flex-start;
+}
+
+.flex-item{
+    bsckground-color: #28a745;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    min-width: 150px;
+
+}
+
+/* flex item properties: controlling growth */
+
+.card-1{
+    /* grows to consume available space (1 part) */
+    flex-grow: 2;
+    background-color: #ffc107;
+    
+}
+
+.card-2{
+    /* grows twice as much as others (2 parts) */
+    flex-grow: 2;
+    background-color: #dc3545;
+
+}
+
+.card-3{
+    /* grows to consume available space (1 part) */
+    flex-grow:1;
+    background-color:#17a2b8;
+}
+
+.card-4{
+    /* flex-basics sets the initial size before growth/shrink */
+    flex:0 0 100%;  /* shorthand: dont grow (0); dont shrink (0); base size is 100; */
+    background-color: #6c757d;
+    
+}

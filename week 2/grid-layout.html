@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid & Responsive Layout Demo</title>
+    <link rel="stylesheet" href="./grid-layout.css">
+</head>
+<body>
+
+    <div class="grid-container">
+
+        <header class="grid-item header-area">
+            <h1>Header (Grid Area)</h1>
+        </header>
+
+        <nav class="grid-item nav-area">Navigation</nav>
+
+        <main class="grid-item main-area">
+            <h2>Main Content Area</h2>
+            <p>
+                This area takes up the largest fraction of space (4fr) and 
+                reflows below the nav on mobile.
+            </p>
+        </main>
+
+        <aside class="grid-item sidebar-area">Sidebar (1fr)</aside>
+
+        <footer class="grid-item footer-area">Footer (Full Width)</footer>        
+
+    </div>
+
+</body>
+</html>

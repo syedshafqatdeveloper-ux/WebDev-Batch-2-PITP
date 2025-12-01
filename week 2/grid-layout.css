@@ -1,0 +1,101 @@
+
+/* General Styling and Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    padding: 20px;
+}
+
+/* --- GRID CONTAINER SETUP (Desktop/Default View) --- */
+
+.grid-container {
+    /* 1. REQUIRED: Activates CSS Grid layout */
+    display: grid; 
+    
+    /* Sets padding and border for visualization */
+    border: 3px solid #007bff;
+    gap: 15px; /* Spacing between grid items */
+    padding: 15px;
+    background-color: white;
+    min-height: 90vh;
+}
+
+/* 2. Defining Columns and Rows using 'fr' (Fractional Unit) */
+.grid-container {
+    /* Creates 3 columns: a small 1fr nav, a large 4fr content area, and a 1fr sidebar */
+    grid-template-columns: 1fr 4fr 1fr;
+    
+    /* Defines the rows for the layout */
+    grid-template-rows: auto 1fr auto; 
+    
+    /* 3. Defining named template areas visually */
+    grid-template-areas:
+        "header-area header-area header-area"
+        "nav-area    main-area   sidebar-area"
+        "footer-area footer-area footer-area";
+}
+
+
+/* --- GRID ITEM PLACEMENT --- */
+
+.grid-item {
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Assigning Items to their named areas */
+.header-area {
+    grid-area: header-area;
+    background-color: #007bff;
+}
+.nav-area {
+    grid-area: nav-area;
+    background-color: #28a745;
+}
+.main-area {
+    grid-area: main-area;
+    background-color: #17a2b8;
+}
+.sidebar-area {
+    grid-area: sidebar-area;
+    background-color: #ffc107;
+}
+.footer-area {
+    grid-area: footer-area;
+    background-color: #6c757d;
+}
+
+
+/* --- MEDIA QUERY FOR RESPONSIVENESS (Mobile View) --- */
+
+/* Changes the layout when the viewport is 768px wide or smaller */
+@media (max-width: 768px) {
+    
+    /* 4. Overriding the layout within the Media Query */
+    .grid-container {
+        /* Redefines to a single column */
+        grid-template-columns: 1fr; 
+        
+        /* Redefines the named areas to stack vertically */
+        grid-template-areas:
+            "header-area"
+            "nav-area"
+            "sidebar-area"
+            "main-area"
+            "footer-area";
+    }
+    
+    .grid-item {
+        /* Adjusts padding for smaller screens */
+        padding: 10px;
+    }
+}
