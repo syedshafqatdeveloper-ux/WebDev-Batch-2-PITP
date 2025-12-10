@@ -1,0 +1,65 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e2ff40;
+    color:rgb(255, 255, 255);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+
+}
+
+.container{
+    background-color: #555353f6;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(35, 172, 210, 0.801);
+    max-width: 400px;
+    width: 100%;
+
+}
+
+h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+
+}
+
+button {
+    backgound-color: #d22a17;
+    color: rgb(87, 153, 177);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px; /*Made it rounder for a nicer feel */
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(239, 235, 235, 0.1);
+
+}
+
+button-hover {
+    background-color: rgb(0, 255, 195);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(3, 21, 183, 0.2);
+}
+button:active{
+    transform: translateY(0);
+
+}
+
+#answer{
+    margin-top: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    min-height: 60px;
+    padding: 20px;
+    background: rgba(0,0,0,0.2); /*added a subtle background for the text */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
